@@ -1,0 +1,400 @@
+﻿{
+  "name": "IISGorVodokanalRequestFromUser",
+  "modelName": "i-i-s-gor-vodokanal-request-from-user",
+  "className": "RequestFromUser",
+  "nameSpace": "IIS.GorVodokanal",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "number",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "status",
+      "type": "i-i-s-gor-vodokanal-t-status",
+      "flexberryType": "tStatus",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "applicant",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "dateOpen",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "dateClose",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "responsible",
+      "relatedTo": "i-i-s-gor-vodokanal-employee",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "secondaryRequest",
+      "relatedTo": "i-i-s-gor-vodokanal-request-from-user",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "requestType",
+      "relatedTo": "i-i-s-gor-vodokanal-request-type",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "requestKind",
+      "relatedTo": "i-i-s-gor-vodokanal-request-kind",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "operator",
+      "relatedTo": "i-i-s-gor-vodokanal-employee",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "requestCause",
+      "relatedTo": "i-i-s-gor-vodokanal-request-cause",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "RequestE",
+      "modelName": "i-i-s-gor-vodokanal-request-from-user",
+      "attrs": [
+        {
+          "name": "number",
+          "caption": "Number",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "status",
+          "caption": "Status",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "dateOpen",
+          "caption": "Date open",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "applicant",
+          "caption": "Applicant",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "dateClose",
+          "caption": "Date close",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "FIO",
+          "lookupValueField": "fIO",
+          "relationName": "Responsible",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "fIO",
+              "caption": "FIO",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Responsible",
+          "name": "responsible",
+          "relatedTo": "i-i-s-gor-vodokanal-employee",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Applicant",
+          "lookupValueField": "applicant",
+          "relationName": "SecondaryRequest",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "applicant",
+              "caption": "Applicant",
+              "hidden": false,
+              "index": 8
+            }
+          ],
+          "index": 7,
+          "type": "standard",
+          "caption": "Secondary Request",
+          "name": "secondaryRequest",
+          "relatedTo": "i-i-s-gor-vodokanal-request-from-user",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "RequestType",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 10
+            }
+          ],
+          "index": 9,
+          "type": "standard",
+          "caption": "Request type",
+          "name": "requestType",
+          "relatedTo": "i-i-s-gor-vodokanal-request-type",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "RequestKind",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 12
+            }
+          ],
+          "index": 11,
+          "type": "standard",
+          "caption": "Request kind",
+          "name": "requestKind",
+          "relatedTo": "i-i-s-gor-vodokanal-request-kind",
+          "inverse": null
+        },
+        {
+          "lookupValue": "FIO",
+          "lookupValueField": "fIO",
+          "relationName": "Operator",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "fIO",
+              "caption": "FIO",
+              "hidden": false,
+              "index": 14
+            }
+          ],
+          "index": 13,
+          "type": "standard",
+          "caption": "Operator",
+          "name": "operator",
+          "relatedTo": "i-i-s-gor-vodokanal-employee",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "RequestCause",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 16
+            }
+          ],
+          "index": 15,
+          "type": "standard",
+          "caption": "Request cause",
+          "name": "requestCause",
+          "relatedTo": "i-i-s-gor-vodokanal-request-cause",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "RequestL",
+      "modelName": "i-i-s-gor-vodokanal-request-from-user",
+      "attrs": [
+        {
+          "name": "number",
+          "caption": "Number",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "status",
+          "caption": "Status",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "dateOpen",
+          "caption": "Date open",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "applicant",
+          "caption": "Applicant",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "dateClose",
+          "caption": "Date close",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Responsible",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [],
+          "index": 5,
+          "type": "default",
+          "caption": "FIO",
+          "name": "responsible",
+          "relatedTo": "i-i-s-gor-vodokanal-employee",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "SecondaryRequest",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "applicant",
+              "caption": "Applicant",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Applicant",
+          "name": "secondaryRequest",
+          "relatedTo": "i-i-s-gor-vodokanal-request-from-user",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "RequestType",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [],
+          "index": 7,
+          "type": "default",
+          "caption": "Name",
+          "name": "requestType",
+          "relatedTo": "i-i-s-gor-vodokanal-request-type",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "RequestKind",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [],
+          "index": 8,
+          "type": "default",
+          "caption": "Name",
+          "name": "requestKind",
+          "relatedTo": "i-i-s-gor-vodokanal-request-kind",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Operator",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [],
+          "index": 9,
+          "type": "default",
+          "caption": "FIO",
+          "name": "operator",
+          "relatedTo": "i-i-s-gor-vodokanal-employee",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "RequestCause",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [],
+          "index": 10,
+          "type": "default",
+          "caption": "Name",
+          "name": "requestCause",
+          "relatedTo": "i-i-s-gor-vodokanal-request-cause",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

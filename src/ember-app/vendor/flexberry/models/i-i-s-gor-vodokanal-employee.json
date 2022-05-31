@@ -1,0 +1,87 @@
+﻿{
+  "name": "IISGorVodokanalEmployee",
+  "modelName": "i-i-s-gor-vodokanal-employee",
+  "className": "Employee",
+  "nameSpace": "IIS.GorVodokanal",
+  "parentModelName": "i-i-s-gor-vodokanal-dictionary",
+  "parentClassName": "Dictionary",
+  "attrs": [
+    {
+      "name": "fIO",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "EmployeeE",
+      "modelName": "i-i-s-gor-vodokanal-employee",
+      "attrs": [
+        {
+          "name": "fIO",
+          "caption": "FIO",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "email",
+          "caption": "Email",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "active",
+          "caption": "Active",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "EmployeeL",
+      "modelName": "i-i-s-gor-vodokanal-employee",
+      "attrs": [
+        {
+          "name": "fIO",
+          "caption": "FIO",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "email",
+          "caption": "Email",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "active",
+          "caption": "Active",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

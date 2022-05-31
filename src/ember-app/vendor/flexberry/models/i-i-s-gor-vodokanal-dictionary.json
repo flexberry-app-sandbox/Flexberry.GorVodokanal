@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISGorVodokanalDictionary",
+  "modelName": "i-i-s-gor-vodokanal-dictionary",
+  "className": "Dictionary",
+  "nameSpace": "IIS.GorVodokanal",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "active",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "DictionaryE",
+      "modelName": "i-i-s-gor-vodokanal-dictionary",
+      "attrs": [
+        {
+          "name": "active",
+          "caption": "Active",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "DictionaryL",
+      "modelName": "i-i-s-gor-vodokanal-dictionary",
+      "attrs": [
+        {
+          "name": "active",
+          "caption": "Active",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

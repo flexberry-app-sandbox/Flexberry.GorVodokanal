@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Employee",
+  "name": "IISGorVodokanalEmployeeE",
+  "className": "EmployeeE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-gor-vodokanal-employee",
+      "modelProjection": "EmployeeE"
+    }
+  ]
+}

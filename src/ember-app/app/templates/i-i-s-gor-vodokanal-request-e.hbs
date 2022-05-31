@@ -1,0 +1,247 @@
+<h3 class="ui header">{{t "forms.i-i-s-gor-vodokanal-request-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.number
+      class=(if (v-get validationModel "number" "isInvalid") "error")
+      label=(t "forms.i-i-s-gor-vodokanal-request-e.number-caption")
+      data-test-i-i-s-gor-vodokanal-request-e-number=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "number" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-gor-vodokanal-request-e-status="true">
+    <label>{{t "forms.i-i-s-gor-vodokanal-request-e.status-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-gor-vodokanal-t-status")
+      value=model.status
+      class=(if (v-get validationModel "status" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "status" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-gor-vodokanal-request-e.dateOpen-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.dateOpen
+      class=(if (v-get validationModel "dateOpen" "isInvalid") "error")
+      data-test-i-i-s-gor-vodokanal-request-e-dateOpen=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "dateOpen" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.applicant
+      class=(if (v-get validationModel "applicant" "isInvalid") "error")
+      label=(t "forms.i-i-s-gor-vodokanal-request-e.applicant-caption")
+      data-test-i-i-s-gor-vodokanal-request-e-applicant=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "applicant" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-gor-vodokanal-request-e.dateClose-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.dateClose
+      class=(if (v-get validationModel "dateClose" "isInvalid") "error")
+      data-test-i-i-s-gor-vodokanal-request-e-dateClose=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "dateClose" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-gor-vodokanal-request-e.responsible-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.responsible
+      displayAttributeName="fIO"
+      autocomplete=true
+      relationName="responsible"
+      projection="EmployeeL"
+      title=(t "forms.i-i-s-gor-vodokanal-request-e.responsible-caption")
+      readonly=readonly
+      componentName="responsibleLookup"
+      class=(if (v-get validationModel "responsible" "isInvalid") "error")
+      data-test-i-i-s-gor-vodokanal-request-e-responsible=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "responsible" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.responsible.fIO
+      class=(if (v-get validationModel.responsible "fIO" "isInvalid") "error")
+      label=(t "forms.i-i-s-gor-vodokanal-request-e.responsible.fIO-caption")
+      data-test-i-i-s-gor-vodokanal-request-e-responsible-fIO=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.responsible "fIO" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-gor-vodokanal-request-e.secondaryRequest-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.secondaryRequest
+      displayAttributeName="applicant"
+      autocomplete=true
+      relationName="secondaryRequest"
+      projection="RequestL"
+      title=(t "forms.i-i-s-gor-vodokanal-request-e.secondaryRequest-caption")
+      readonly=readonly
+      componentName="secondaryRequestLookup"
+      class=(if (v-get validationModel "secondaryRequest" "isInvalid") "error")
+      data-test-i-i-s-gor-vodokanal-request-e-secondaryRequest=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "secondaryRequest" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.secondaryRequest.applicant
+      class=(if (v-get validationModel.secondaryRequest "applicant" "isInvalid") "error")
+      label=(t "forms.i-i-s-gor-vodokanal-request-e.secondaryRequest.applicant-caption")
+      data-test-i-i-s-gor-vodokanal-request-e-secondaryRequest-applicant=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.secondaryRequest "applicant" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-gor-vodokanal-request-e.requestType-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.requestType
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="requestType"
+      projection="RequestTypeL"
+      title=(t "forms.i-i-s-gor-vodokanal-request-e.requestType-caption")
+      readonly=readonly
+      componentName="requestTypeLookup"
+      class=(if (v-get validationModel "requestType" "isInvalid") "error")
+      data-test-i-i-s-gor-vodokanal-request-e-requestType=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "requestType" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.requestType.name
+      class=(if (v-get validationModel.requestType "name" "isInvalid") "error")
+      label=(t "forms.i-i-s-gor-vodokanal-request-e.requestType.name-caption")
+      data-test-i-i-s-gor-vodokanal-request-e-requestType-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.requestType "name" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-gor-vodokanal-request-e.requestKind-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.requestKind
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="requestKind"
+      projection="RequestKindL"
+      title=(t "forms.i-i-s-gor-vodokanal-request-e.requestKind-caption")
+      readonly=readonly
+      componentName="requestKindLookup"
+      class=(if (v-get validationModel "requestKind" "isInvalid") "error")
+      data-test-i-i-s-gor-vodokanal-request-e-requestKind=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "requestKind" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.requestKind.name
+      class=(if (v-get validationModel.requestKind "name" "isInvalid") "error")
+      label=(t "forms.i-i-s-gor-vodokanal-request-e.requestKind.name-caption")
+      data-test-i-i-s-gor-vodokanal-request-e-requestKind-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.requestKind "name" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-gor-vodokanal-request-e.operator-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.operator
+      displayAttributeName="fIO"
+      autocomplete=true
+      relationName="operator"
+      projection="EmployeeL"
+      title=(t "forms.i-i-s-gor-vodokanal-request-e.operator-caption")
+      readonly=readonly
+      componentName="operatorLookup"
+      class=(if (v-get validationModel "operator" "isInvalid") "error")
+      data-test-i-i-s-gor-vodokanal-request-e-operator=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "operator" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.operator.fIO
+      class=(if (v-get validationModel.operator "fIO" "isInvalid") "error")
+      label=(t "forms.i-i-s-gor-vodokanal-request-e.operator.fIO-caption")
+      data-test-i-i-s-gor-vodokanal-request-e-operator-fIO=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.operator "fIO" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-gor-vodokanal-request-e.requestCause-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.requestCause
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="requestCause"
+      projection="RequestCauseL"
+      title=(t "forms.i-i-s-gor-vodokanal-request-e.requestCause-caption")
+      readonly=readonly
+      componentName="requestCauseLookup"
+      class=(if (v-get validationModel "requestCause" "isInvalid") "error")
+      data-test-i-i-s-gor-vodokanal-request-e-requestCause=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "requestCause" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.requestCause.name
+      class=(if (v-get validationModel.requestCause "name" "isInvalid") "error")
+      label=(t "forms.i-i-s-gor-vodokanal-request-e.requestCause.name-caption")
+      data-test-i-i-s-gor-vodokanal-request-e-requestCause-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.requestCause "name" "message")}}
+  </div>
+</form>

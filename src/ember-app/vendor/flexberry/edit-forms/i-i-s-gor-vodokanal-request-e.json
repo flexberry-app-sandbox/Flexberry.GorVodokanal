@@ -1,0 +1,63 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Responsible",
+      "projection": "EmployeeL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "SecondaryRequest",
+      "projection": "RequestL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "RequestType",
+      "projection": "RequestTypeL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "RequestKind",
+      "projection": "RequestKindL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Operator",
+      "projection": "EmployeeL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "RequestCause",
+      "projection": "RequestCauseL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Request",
+  "name": "IISGorVodokanalRequestE",
+  "className": "RequestE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-gor-vodokanal-request-from-user",
+      "modelProjection": "RequestE"
+    }
+  ]
+}

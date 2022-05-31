@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-gor-vodokanal-request-type-e",
+  "editForm": "i-i-s-gor-vodokanal-request-type-e",
+  "external": false,
+  "caption": "Request type",
+  "name": "IISGorVodokanalRequestTypeL",
+  "className": "RequestTypeL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-gor-vodokanal-request-type",
+      "modelProjection": "RequestTypeL"
+    }
+  ]
+}

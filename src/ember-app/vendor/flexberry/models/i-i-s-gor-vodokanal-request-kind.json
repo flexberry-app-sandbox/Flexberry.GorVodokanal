@@ -1,0 +1,87 @@
+﻿{
+  "name": "IISGorVodokanalRequestKind",
+  "modelName": "i-i-s-gor-vodokanal-request-kind",
+  "className": "RequestKind",
+  "nameSpace": "IIS.GorVodokanal",
+  "parentModelName": "i-i-s-gor-vodokanal-dictionary",
+  "parentClassName": "Dictionary",
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "code",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "RequestKindE",
+      "modelName": "i-i-s-gor-vodokanal-request-kind",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "code",
+          "caption": "Code",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "active",
+          "caption": "Active",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "RequestKindL",
+      "modelName": "i-i-s-gor-vodokanal-request-kind",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "code",
+          "caption": "Code",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "active",
+          "caption": "Active",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

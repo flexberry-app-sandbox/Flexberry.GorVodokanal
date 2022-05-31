@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Request kind",
+  "name": "IISGorVodokanalRequestKindE",
+  "className": "RequestKindE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-gor-vodokanal-request-kind",
+      "modelProjection": "RequestKindE"
+    }
+  ]
+}

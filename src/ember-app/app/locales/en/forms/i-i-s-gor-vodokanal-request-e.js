@@ -1,0 +1,20 @@
+export default {
+  caption: 'Request',
+  'number-caption': 'Number',
+  'status-caption': 'Status',
+  'dateOpen-caption': 'Date open',
+  'applicant-caption': 'Applicant',
+  'dateClose-caption': 'Date close',
+  'responsible.fIO-caption': 'FIO',
+  'secondaryRequest.applicant-caption': 'Applicant',
+  'requestType.name-caption': 'Name',
+  'requestKind.name-caption': 'Name',
+  'operator.fIO-caption': 'FIO',
+  'requestCause.name-caption': 'Name',
+  'responsible-caption': 'Responsible',
+  'secondaryRequest-caption': 'Secondary Request',
+  'requestType-caption': 'Request type',
+  'requestKind-caption': 'Request kind',
+  'operator-caption': 'Operator',
+  'requestCause-caption': 'Request cause'
+};

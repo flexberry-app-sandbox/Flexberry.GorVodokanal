@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Dictionary",
+  "name": "IISGorVodokanalDictionaryE",
+  "className": "DictionaryE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-gor-vodokanal-dictionary",
+      "modelProjection": "DictionaryE"
+    }
+  ]
+}

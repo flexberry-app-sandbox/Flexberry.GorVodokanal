@@ -1,0 +1,57 @@
+﻿{
+  "applicationCaption": "Gor vodokanal",
+  "applicationTitle": "Gor vodokanal",
+  "items": [
+    {
+      "link": null,
+      "menuName": "gor-vodokanal",
+      "caption": "GorVodokanal",
+      "title": "GorVodokanal",
+      "children": [
+        {
+          "link": "i-i-s-gor-vodokanal-request-type-l",
+          "menuName": null,
+          "caption": "Request type",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-gor-vodokanal-request-l",
+          "menuName": null,
+          "caption": "Request",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-gor-vodokanal-request-cause-l",
+          "menuName": null,
+          "caption": "Request cause",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-gor-vodokanal-employee-l",
+          "menuName": null,
+          "caption": "Employee",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-gor-vodokanal-dictionary-l",
+          "menuName": null,
+          "caption": "Dictionary",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-gor-vodokanal-request-kind-l",
+          "menuName": null,
+          "caption": "Request kind",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

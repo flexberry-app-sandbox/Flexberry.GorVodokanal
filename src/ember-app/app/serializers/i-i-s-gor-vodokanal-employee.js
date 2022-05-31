@@ -1,0 +1,10 @@
+import { Serializer as EmployeeSerializer } from
+  '../mixins/regenerated/serializers/i-i-s-gor-vodokanal-employee';
+import DictionarySerializer from './i-i-s-gor-vodokanal-dictionary';
+
+export default DictionarySerializer.extend(EmployeeSerializer, {
+  /**
+  * Field name where object identifier is kept.
+  */
+  primaryKey: '__PrimaryKey'
+});

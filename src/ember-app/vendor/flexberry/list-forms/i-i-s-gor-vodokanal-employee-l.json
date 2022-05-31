@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-gor-vodokanal-employee-e",
+  "editForm": "i-i-s-gor-vodokanal-employee-e",
+  "external": false,
+  "caption": "Employee",
+  "name": "IISGorVodokanalEmployeeL",
+  "className": "EmployeeL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-gor-vodokanal-employee",
+      "modelProjection": "EmployeeL"
+    }
+  ]
+}

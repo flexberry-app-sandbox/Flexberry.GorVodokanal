@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-gor-vodokanal-request-cause-e",
+  "editForm": "i-i-s-gor-vodokanal-request-cause-e",
+  "external": false,
+  "caption": "Request cause",
+  "name": "IISGorVodokanalRequestCauseL",
+  "className": "RequestCauseL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-gor-vodokanal-request-cause",
+      "modelProjection": "RequestCauseL"
+    }
+  ]
+}

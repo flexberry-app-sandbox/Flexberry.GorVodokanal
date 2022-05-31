@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Request cause",
+  "name": "IISGorVodokanalRequestCauseE",
+  "className": "RequestCauseE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-gor-vodokanal-request-cause",
+      "modelProjection": "RequestCauseE"
+    }
+  ]
+}

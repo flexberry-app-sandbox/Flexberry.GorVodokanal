@@ -1,0 +1,10 @@
+﻿{
+  "nameSpace": "IIS.GorVodokanal",
+  "className": "tStatus",
+  "enumObjects": {
+    "Opened": "Открыто",
+    "Controlling": "На контроле",
+    "Attached": "Присоединено",
+    "Closed": "Закрыто"
+  }
+}
