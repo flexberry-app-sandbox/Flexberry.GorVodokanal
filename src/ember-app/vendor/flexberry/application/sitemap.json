@@ -9,45 +9,46 @@
       "title": "GorVodokanal",
       "children": [
         {
-          "link": "i-i-s-gor-vodokanal-request-type-l",
-          "menuName": null,
-          "caption": "Request type",
-          "title": "",
-          "children": null
-        },
-        {
           "link": "i-i-s-gor-vodokanal-request-l",
           "menuName": null,
           "caption": "Request",
           "title": "",
           "children": null
-        },
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "dictionaries",
+      "caption": "Dictionaries",
+      "title": "Dictionaries",
+      "children": [
         {
-          "link": "i-i-s-gor-vodokanal-request-cause-l",
+          "link": "i-i-s-gor-vodokanal-request-type-l",
           "menuName": null,
-          "caption": "Request cause",
-          "title": "",
+          "caption": "Request Type",
+          "title": "Request type",
           "children": null
         },
         {
           "link": "i-i-s-gor-vodokanal-employee-l",
           "menuName": null,
           "caption": "Employee",
-          "title": "",
+          "title": "Employee",
           "children": null
         },
         {
-          "link": "i-i-s-gor-vodokanal-dictionary-l",
+          "link": "i-i-s-gor-vodokanal-request-cause-l",
           "menuName": null,
-          "caption": "Dictionary",
-          "title": "",
+          "caption": "Request Cause",
+          "title": "Request cause",
           "children": null
         },
         {
           "link": "i-i-s-gor-vodokanal-request-kind-l",
           "menuName": null,
-          "caption": "Request kind",
-          "title": "",
+          "caption": "Request Kind",
+          "title": "Request kind",
           "children": null
         }
       ]

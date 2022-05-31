@@ -99,12 +99,12 @@ $.extend(true, translations, {
         'gor-vodokanal': {
           caption: 'GorVodokanal',
           title: 'GorVodokanal',
-          'i-i-s-gor-vodokanal-request-type-l': {
-            caption: 'Request type',
-            title: ''
-          },
           'i-i-s-gor-vodokanal-request-l': {
             caption: 'Request',
+            title: ''
+          },
+          'i-i-s-gor-vodokanal-request-type-l': {
+            caption: 'Request type',
             title: ''
           },
           'i-i-s-gor-vodokanal-request-cause-l': {
@@ -122,6 +122,26 @@ $.extend(true, translations, {
           'i-i-s-gor-vodokanal-request-kind-l': {
             caption: 'Request kind',
             title: ''
+          }
+        },
+        dictionaries: {
+          caption: 'Dictionaries',
+          title: 'Dictionaries',
+          'i-i-s-gor-vodokanal-request-type-l': {
+            caption: 'Request Type',
+            title: 'Request type'
+          },
+          'i-i-s-gor-vodokanal-employee-l': {
+            caption: 'Employee',
+            title: 'Employee'
+          },
+          'i-i-s-gor-vodokanal-request-cause-l': {
+            caption: 'Request Cause',
+            title: 'Request cause'
+          },
+          'i-i-s-gor-vodokanal-request-kind-l': {
+            caption: 'Request Kind',
+            title: 'Request kind'
           }
         }
       }
